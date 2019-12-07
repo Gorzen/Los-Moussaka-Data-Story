@@ -1,6 +1,5 @@
 # --- General options --- #
-url: "https://gorzen.github.io/Los-Moussaka-Data-Story/"
-baseurl: ""
+
 
 # Name of website
 title: Amazon food data analysis
