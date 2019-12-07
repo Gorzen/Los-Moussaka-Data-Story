@@ -24,7 +24,7 @@ navbar-links:
   About Us: "aboutus"
   Resources:
     - GitHub respository: "https://github.com/Gorzen/Los-Moussaka-ADA"
-    - Download the Database: "http://jmcauley.ucsd.edu/data/amazon/"
+    - Download the Database: "https://nijianmo.github.io/amazon/index.html"
 
 
 # Image to show in the navigation bar - image must be a square (width = height)
