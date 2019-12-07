@@ -21,7 +21,6 @@ description: A virtual proof that I'm awesome
 
 # List of links in the navigation bar
 navbar-links:
-  About Us: "aboutus"
   Resources:
     - GitHub respository: "https://github.com/Gorzen/Los-Moussaka-ADA"
     - Download the Database: "http://jmcauley.ucsd.edu/data/amazon/"
