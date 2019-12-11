@@ -4907,6 +4907,14 @@ a.thumbnail.active {
   margin-bottom: 20px;
   border: 1px solid transparent;
   border-radius: 4px;
+  border-color: #563124;
+}
+.alert-abstract {
+  background-color: #d8af84;
+  color: #59453E;
+}
+.alert-heading {
+  color: inherit;
 }
 .alert h4 {
   margin-top: 0;
@@ -4921,6 +4929,9 @@ a.thumbnail.active {
 }
 .alert > p + p {
   margin-top: 5px;
+}
+hr {
+  border-top: 1px solid #563124;
 }
 .alert-dismissable,
 .alert-dismissible {
