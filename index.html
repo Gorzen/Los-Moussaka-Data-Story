@@ -5,49 +5,59 @@ subtitle: Data story for Amazon food
 use-site-title: true
 ---
 
-<h1> Introduction </h1>
+<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+  <h1> Introduction </h1>
+  <div class="alert alert-abstract" role="alert">
+    <h4 class="alert-heading">Abstract</h4 >
+    <hr>
+    <p>Nowadays Amazon's popularity grows increasingly and becomes massive, it is ubiquitous in our era of cloud services and big data. Amazon has plenty of servers, buys big succesful companies such as Twitch, its CEO is the wealthiest man of our generation. But its underpinning is of course the website Amazon, thus making it a very interesting data provider.</p>
+    <p>On Amazon you can buy almost any product nowadays, including food. Indeed you can buy your groceries on Amazon and you can see users's ratings of the food item you're looking at. This of course changes the consumer's behavior. However, how much of an impact does it have on the consumer? Does Amazon favor some diets over others? Are users's consumption affected over time or do they keep buying the same stuff? On Amazon you can also see what related products people tend to look at after looking at the one you're looking at. Again, this most likely has an impact on sales, but is it possible to quantify it?</p>
+  </div >
 
+  <h3>The database</h3>
+  <p>Our dataset is Amazon product data 2018 <a href="https://nijianmo.github.io/amazon/index.html"> dataset is Amazon product data 2018</a>, i.e. one of the proposed dataset but updated), more specifically the "Grocery and Gourmet Food", which contains around 5'074'160 millions of reviews from May 1996 to October 2018 along with the food items's metadata. Reviews in the dataset are from USA.</p>
+  <p>The metadata contains basic information like the product id, but also more complex information like a list of <i>also bought</i> and <i>also viewed</i> products that points to products related to the original one, on two different levels. It also contains the price, the brand and the categories for example.</p>
+  <p>Concerning the actual reviews in the dataset, they contain all relevant information for a review: reviewer, time of the review, rating on the review, comment of the review.</p>
+  <p>However, we thus don't directly have access to what users bought. So we must be careful as we can't analyze what people purchased but only what they are reviewing. Also, the metadata is per item so it's not personalized by users.</p>
+  <p>Example of the review:</p>
+  <img src="img/amazon-review-example.jpg" alt="Amazon example review"> 
 
-<div class="alert alert-abstract" role="alert">
-<h4 class="alert-heading">Abstract</h4 >
-<hr>
-<p>
-Nowadays Amazon's popularity grows increasingly and becomes massive, it is ubiquitous in our era of cloud services and big data. Amazon has plenty of servers, buys big succesful companies such as Twitch, its CEO is the wealthiest man of our generation. But its underpinning is of course the website Amazon, thus making it a very interesting data provider.
-</p>
+  <p></p>
+  <h1> Let's dive into data </h1>
+</div>
 
-<p>
-On Amazon you can buy almost any product nowadays, including food. Indeed you can buy your groceries on Amazon and you can see users's ratings of the food item you're looking at. This of course changes the consumer's behavior. However, how much of an impact does it have on the consumer? Does Amazon favor some diets over others? Are users's consumption affected over time or do they keep buying the same stuff? On Amazon you can also see what related products people tend to look at after looking at the one you're looking at. Again, this most likely has an impact on sales, but is it possible to quantify it?
-</p>
-</div >
+<div class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-0">
+  <div class="parent">
+    <iframe class="child"
+            id="inlineFrameExample"
+            title="Inline Frame Example"
+            frameBorder="0"
+            scrolling="no"
+            src="plots/all_reviews.html">
+    </iframe>
+  </div>
+</div>
 
-<h3>The database</h3>
-<p>
-Our dataset is Amazon product data 2018 <a href="https://nijianmo.github.io/amazon/index.html"> dataset is Amazon product data 2018</a>, i.e. one of the proposed dataset but updated), more specifically the "Grocery and Gourmet Food", which contains around 5'074'160 millions of reviews from May 1996 to October 2018 along with the food items's metadata. Reviews in the dataset are from USA.	
-</p>
-<p>
-The metadata contains basic information like the product id, but also more complex information like a list of <i>also bought</i> and <i>also viewed</i> products that points to products related to the original one, on two different levels. It also contains the price, the brand and the categories for example.
-</p>
-<p>
-Concerning the actual reviews in the dataset, they contain all relevant information for a review: reviewer, time of the review, rating on the review, comment of the review.
-</p>
-<p>
-However, we thus don't directly have access to what users bought. So we must be careful as we can't analyze what people purchased but only what they are reviewing. Also, the metadata is per item so it's not personalized by users.
-</p>
+<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+  <p class="box-note">
+  <em><strong>Nux: </strong>&ldquo;Witness me!&rdquo;</em>
+  <br/>
+  <em><strong>Immortan Joe: </strong>&ldquo;You will ride eternal, shiny and chrome.&rdquo;</em>
+  <br/>
+  <em><strong>Nux: </strong>&ldquo;I live, I die, I live again!&rdquo;</em>
+  <br/>
+  <em><strong>Immortan Joe: </strong>&ldquo;Return my treasures to me, and I myself will carry you to the gates of Valhalla.&rdquo;</em>
+  </p>
+</div>
 
-<p>
-Example of the review:
-</p>
-<img src="img/amazon-review-example.jpg" alt="Amazon example review"> 
-
-<p></p>
-<h1> Let's dive into data </h1>
-
-<div class="parent">
-<iframe class="child"
-  id="inlineFrameExample"
-  title="Inline Frame Example"
-  scrolling="no"
-  style="border-radius: 20px; border-width: 2px; border-color: #563124; overflow: hidden;"
-  src="plots/all_reviews.html">
-</iframe>
+<div class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-0">
+  <div class="parent">
+    <iframe class="child"
+            id="inlineFrameExample"
+            title="Inline Frame Example"
+            frameBorder="0"
+            scrolling="no"
+            src="plots/time_series_first_10000.html">
+    </iframe>
+  </div>
 </div>
