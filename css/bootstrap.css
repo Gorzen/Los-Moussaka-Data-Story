@@ -1153,7 +1153,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #232F3E;
 }
 .sr-only {
   position: absolute;
@@ -4923,8 +4923,7 @@ a.thumbnail.active {
   border-color: #563124;
 }
 .alert-abstract {
-  background-color: #d8af84;
-  color: #59453E;
+  background-color: #e3eaea;
 }
 .alert-heading {
   color: inherit;
@@ -4942,9 +4941,6 @@ a.thumbnail.active {
 }
 .alert > p + p {
   margin-top: 5px;
-}
-hr {
-  border-top: 1px solid #563124;
 }
 .alert-dismissable,
 .alert-dismissible {

@@ -8,7 +8,7 @@ layout: null
 
 body {
   font-family: 'Lora', 'Times New Roman', serif;
-  font-size: 18px;
+  font-size: 19px;
   color: #404040;
   position: relative;
   background-color: {{ site.page-col }};
@@ -43,7 +43,7 @@ hr.small {
   max-width: 100px;
   margin: 15px auto;
   border-width: 4px;
-  border-color: inherit;
+  border-color: #FF9900;
   border-radius: 3px;
 }
 
@@ -717,14 +717,14 @@ pre {
 .box-note, .box-warning, .box-error, .box-success {
   padding: 15px 15px 15px 10px;
   margin: 20px 20px 20px 5px;
-  border: 1px solid #eee;
+  border: 1px solid #e3eaea;
   border-left-width: 5px;
   border-radius: 5px 3px 3px 5px;
 }
 
 .box-note {
-  background-color: #eee;
-  border-left-color: #2980b9;
+  background-color: #e3eaea;
+  border-left-color: #FF9900;
 }
 
 .box-warning {
