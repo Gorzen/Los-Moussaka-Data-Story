@@ -21,9 +21,8 @@ description: Amazon food reviews data analysis
 
 # List of links in the navigation bar
 navbar-links:
-  Resources:
-    - GitHub respository: "https://github.com/Gorzen/Los-Moussaka-ADA"
-    - Download the dataset: "https://nijianmo.github.io/amazon/index.html"
+  GitHub respository: "https://github.com/Gorzen/Los-Moussaka-ADA"
+  Download the dataset: "https://nijianmo.github.io/amazon/index.html"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
@@ -37,15 +36,15 @@ navbar-links:
 
 # Personalize the colors in your website. Colour values can be any valid CSS colour
 
-navbar-col: "#B28555"
-navbar-text-col: "#59453E"
-navbar-children-col: "#F5F5F5"
-page-col: "#F9E7C5"
-link-col: "#DB744E"
-hover-col: "#FF8A59"
-footer-col: "#B28555"
-footer-text-col: "#59453E"
-footer-link-col: "#914b31"
+navbar-col: "#232F3E"
+navbar-text-col: "#FFFFFF"
+navbar-children-col: "#37475A"
+page-col: "#EAEDED"
+link-col: "#0F6FC3"
+hover-col: "#FF9900"
+footer-col: "#232F3E"
+footer-text-col: "#CCCDCE"
+footer-link-col: "#0F6FC3"
 
 # Alternatively, the navbar, footer, and page background can be set to use background images
 # instead of colour
