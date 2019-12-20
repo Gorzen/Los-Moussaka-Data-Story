@@ -29,7 +29,7 @@ use-site-title: true
   <p>The data we use comes from Amazon reviews from the "Grocery and Gourmet Food" category between 2000 and 2018, it contains 5'074'160 reviews, which come from American users. We also have metadata about the products the reviews are about.</p>
   <p>However, we thus don't directly have access to what users bought. So we must be careful as we can't analyze what people purchased but only what they are reviewing. The information we have access to is indirect and it's more tricky to process it. We'll see that we can still get interesting insights from this. In fact, reviews contain much more information than just the sales as we can know what people are talking about during a specific event. The context can be infered and that's of great value.</p>
   <p>Example of a review:</p>
-  <img src="img/amazon-review-example.jpg" alt="Amazon example review"> 
+  <img src="img/amazon-review-example.jpg" alt="Amazon example review">
   <p>Here you can see the number of reviews we have for every day:</p>
 </div>
 
@@ -98,9 +98,10 @@ use-site-title: true
     <h2>Impact of events on products</h2>
 
     <h2>Most popular event</h2>
+		<p>Now that we have seen what was hidden behind those events, let's compare them. To achieve this we have used the same approach than for the food trends. We first make a small pool of words using Word2Vec, an algorithm that allow us to find words similar to others, and check for the presence of words in this pool. That permit to well visualize the evolution of the event and their importance through the year.</p>
 
     <img class="center-block" id="popular-events" src="plots/popularness.png" onmouseover="onHover();" onmouseout="offHover();"></img>
-
+		<p>Such enthusiasm for Christmas. Indeed this event is very much popular in the United States. As we can see it occupies more than 2.5% at its peak of reviews published on the food section of Amazon and its effect last more than one month. The other two defend theirselves pretty well too. We can see how Valentine is a punctual event, quite popular but for a very short period. On the contrary Easter is much more sparse in time, given all family events that comes around it.</p>
 
     <h2>Anomalies</h2>
     <h3>Mad Max: Fury Road</h3>
