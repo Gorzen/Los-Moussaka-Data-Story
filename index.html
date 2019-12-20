@@ -46,56 +46,65 @@ use-site-title: true
 </div>
 
 <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
-  <h1>Food trends</h1>
-  <h3>Consumption evolution</h3>
+  <p>Before 2012 there are basically no reviews, that's why we didn't plot it. In 2018 (when our data set ends) it slowly decreases from May until there are no more reviews instead of dropping suddenly. We can also notice that it doesn't increase smoothly the number of reviews changes throughout time; this may be due to events! We can also notice that there are more reviews around December/January then it sort of decreases and peaks again. This makes sense since there are a lot of festivities during winter. We'll put the festive events on hold for now, be patient, let's see what trends we can get first!</p>
+  <h2>Food trends: the case of veganism and special diets</h2>
+  <h3>Veganism</h3>
+  <p>Among all the food trends that exist nowadays, the most controversial one is clearly veganism. This trend has gained a lot in popularity during the recent years. It is strongly assosciated to the climate change debate and movement. We all know famous activists in this field such as Greta Thunberg; there also are a lot of manifestations. This makes it a interesting study case. We'll thus try to quantify the veganism evolution:</p>
   <img class="center-block" src="plots/vegan-trend.png">
-  <p>Bob vegan</p>
-  <img class="center-block" src="plots/diets-trend.png">
-  <p>Bob diet</p>
+  <p>This plots the percentage of number of reviews that are for vegan products over the years. How do we know if a product is vegan or not? We could have used machine learning to classify products but a good old keyword-based analysis works very well in this case. A product is vegan if it contains the word vegan, this provides good precision and decent recall. The red line represents the linear regression of the found values, we did an hypothesis test with null hypothesis being: the slope is zero. We found a p-value of 0.000146, so we can fairly soundly reject the null hypothesis. With all of this it would seem that the vegan trend indeed increased quite a bit during the years. It has nearly doubled from 2012, indeed vegansim is a very hot topic nowadays. Both in food and political topics !</p>
 
-  <h3>Countries assosciation to food</h3>
-  <button onclick="plot_country('coffee')">Coffee</button>
-  <button onclick="plot_country('tea')">Tea</button>
-  <button onclick="plot_country('cheese')">Cheese</button>
-  <button onclick="plot_country('curry')">Curry</button>
-  <button onclick="plot_country('espresso')">Espresso</button>
-  <button onclick="plot_country('wine')">Wine</button>
-  <img id="country-plot" class="center-block" src="plots/coffee.png"></img>
-  <script>
-    function plot_country(name) {
+  <h3>Special diets</h3>
+  <p>We can also look at other kind of diets, that are maybe less controversial but still interesting, are 'paleo-like' diets. The specific diets we are looking at are <em>"paleo", "keto", "ketogenic" and "atkins"</em>, these diets are mostly about eating nutritious food but trying to reduce glucide consumption. They are thus very different from the vegan diet, the paleo diet's goal is to eat more like cavemen. Meaning a lot of animal food: meat, eggs, cheese, and so on.</p>
+  <img class="center-block" src="plots/diets-trend.png">
+  <p>We can see that ther is surprinsigly big increase during the years, it has multiplied by almost 5 times! Maybe this is simply some kind of hipster effect: who doesn't want to eat like a caveman ? However, it can also be that people want to have a special and diet in the same context as personnal medicine grows bigger nowadays. Maybe special diets are the new way to feel like you have more control and freedom over your life. But this would require further analysis and isn't the goal of this subject so we won't drill deeper on this axis. We'll instead dig out the festive events we put on hold and see what they can tell us.</p>
+
+  <!--
+    <h2>Countries assosciation to food</h2>
+    <p>A small, but funny, detour we can take is taking a peek at the interest of countries </p>
+    <button onclick="plot_country('coffee')">Coffee</button>
+    <button onclick="plot_country('tea')">Tea</button>
+    <button onclick="plot_country('cheese')">Cheese</button>
+    <button onclick="plot_country('curry')">Curry</button>
+    <button onclick="plot_country('espresso')">Espresso</button>
+    <button onclick="plot_country('wine')">Wine</button>
+    <img id="country-plot" class="center-block" src="plots/coffee.png"></img>
+    <script>
+      function plot_country(name) {
       document.getElementById("country-plot").src = "plots/" + name + ".png";
     }
-  </script>
-  <p>Bob Country</p>
+    </script>
+    <p class="box-error">Bob country</p> -->
+
+    <h2>Impact of events on users</h2>
+    <p>To gain insight about those events, we analyze the frequencies of words present in reviews of products that are popular during the event. The idea is that a product that is abnormally popular during an event compared to the rest of the year will somewhat reflect what themes characterize it and thus the people reviewing it will talk about these themes, in most cases. So for each event, we'll visualize the themes by looking at the words whose frequency differ the most outside and inside the period of the event. This approach will allow us to analyze the users's behavior during an event. This section can be a good start if you want to create a succesful product for a specific event!</p>
+    <h3>Valentine's Day</h3>
+    <p>First, we'll take a look at Valentine's Day, the famous feast of love and romance.</p>
+    <img class="center-block" src="plots/valentine-wordcloud.png"></img>
+    <p><em>Note: we removed 'Valentine' and 'Valentine day' from the words in the wordcloud as they were too big and hiding the other words, while giving low insight.</em></p>
+    <p>Here, we can see the visualization for Valentine, the size of the word represents its importance and we colorized the words belonging to the same theme together. We can see 5 major themes emerging from the picture. In green we have the flowers and plants, in particular roses and lilies which are famous representatives of love, timelessness and passion. The second theme that pops out is the orange theme, which represents chocolate and sweets. Indeed, Reese and Hershey are popular brands of chocolate and sweets maker; Reese is especially popular for having huge sales during all festive popular events. This may also be why Reese is tiny it's not cited a lot more during Valentine's than the rest of the year, since it's always popular. How could you resist a creamy butter cup for Valentine to sweeten your day? The blue theme, containing fruits, is, in our opinion, surprising. Even though, fruit baskets as gifts are a thing for Valentine it doesn't really strike us as strongly correlated to it. But maybe, you, the reader, have a good and reasonable idea of why it could be present here? Next, the dark blue one, is also surprising at first, however there is in fact a very good reason for it. You can get a hint of why it is here, indeed in green you have the word 'wilt'. Let's see it in action!</p>
+    <ul>
+      <li><em>&ldquo;I received about 8 wilted bendy tulips stem with half dead looking leaves more leaves than tulip I must add&rdquo;</em></li>
+      <li><em>&ldquo;These flowers are such a disappointment. They are skimpy and dead. I am extremely disappointed.(no stars are deserved)&rdquo;</em></li>
+      <li><em>&ldquo;Sorry but very disappointed get something for Valentine's day to show the love to my wife and it comes in deadly conditions&rdquo;</em></li>
+    </ul>
+    <p>Last but not least, the red theme, maybe you thought it would the biggest one: the theme representing love and family. However, we are working with reviews so the people will usually talk more about the product and I hope your wife is not for sale on Amazon. This is probably why the theme is not predominant here. But it is interesting to see that we could still capture it, meaning that it strongly linked to Valentine.</p>
+
+    <h3>Christmas</h3>
+    <img class="center-block" src="plots/christmas-wordcloud.png"></img>
+
+    <h3>Easter</h3>
+    <img class="center-block" src="plots/easter-wordcloud.png"></img>
+
+    <h2>Impact of events on products</h2>
+
+    <h2>Most popular event</h2>
+
+    <img class="center-block" id="popular-events" src="plots/popularness.png" onmouseover="onHover();" onmouseout="offHover();"></img>
 
 
-  <h1>Impact of events on users</h1>
-  <h3>Valentine's Day</h3>
-  <img class="center-block" src="plots/valentine-wordcloud.png"></img>
-
-  <h3>Christmas</h3>
-  <img class="center-block" src="plots/christmas-wordcloud.png"></img>
-
-  <h3>Easter</h3>
-  <img class="center-block" src="plots/easter-wordcloud.png"></img>
-
-  <h1>Impact of events on products</h1>
-
-  <h1>Most popular event</h1>
-  <img class="center-block" id="popular-events" src="plots/popularness.png" onmouseover="onHover();" onmouseout="offHover();"></img>
-
-
-  <h1>Anomalies</h1>
-  <h3>Mad Max: Fury Road</h3>
-  <p class="box-note">
-  <em><strong>Nux: </strong>&ldquo;Witness me!&rdquo;</em>
-  <br/>
-  <em><strong>Immortan Joe: </strong>&ldquo;You will ride eternal, shiny and chrome.&rdquo;</em>
-  <br/>
-  <em><strong>Nux: </strong>&ldquo;I live, I die, I live again!&rdquo;</em>
-  <br/>
-  <em><strong>Immortan Joe: </strong>&ldquo;Return my treasures to me, and I myself will carry you to the gates of Valhalla.&rdquo;</em>
-  </p>
+    <h2>Anomalies</h2>
+    <h3>Mad Max: Fury Road</h3>
+    <p>The first anomaly we found was by simply plotting the time series of the number of reviews on multiple products and see if we could capture anything interesting, let's see what they look like:</p>
 </div>
 
 <div class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-0">
