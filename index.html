@@ -41,7 +41,7 @@ use-site-title: true
   <p>The data we use comes from Amazon reviews from the "Grocery and Gourmet Food" category between 2000 and 2018, it contains 5'074'160 reviews, which come from American users. We also have metadata about the products the reviews are about.</p>
   <p>However, we thus don't directly have access to what users bought. So we must be careful as we can't analyze what people purchased but only what they are reviewing. The information we have access to is indirect and it's more tricky to process it. We'll see that we can still get interesting insights from this. In fact, reviews contain much more information than just the sales as we can know what people are talking about during a specific event. The context can be infered and that's of great value.</p>
   <p>Example of a review:</p>
-  <img src="img/amazon-review-example.jpg" alt="Amazon example review"> 
+  <img src="img/amazon-review-example.jpg" alt="Amazon example review">
   <p>Here you can see the number of reviews we have for every day:</p>
 </div>
 
@@ -88,7 +88,7 @@ use-site-title: true
     <p class="box-error">Bob country</p> -->
 
     <h2>Impact of events on users</h2>
-    <p>To gain insight about those events, we analyze the frequencies of words present in reviews of products that are popular during the event. The idea is that a product that is abnormally popular during an event compared to the rest of the year will somewhat reflect what themes characterize it and thus the people reviewing it will talk about these themes, in most cases. So for each event, we'll visualize the themes by looking at the words whose frequency differ the most outside and inside the period of the event. This approach will allow us to analyze the users's behavior during an event. This section can be a good start if you want to create a succesful product for a specific event!</p>
+    <p>To gain insight about those events, we analyze the frequencies of words present in reviews of products that are popular during the period of the event. The idea is that a product that is abnormally popular during an event compared to the rest of the year will somewhat reflect what themes characterize it and thus the people reviewing it will talk about these themes, in most cases. So for each event, we'll visualize the themes by looking at the words whose frequency differ the most outside and inside the period of the event. This approach will allow us to analyze the users's behavior during an event. This section can be a good start if you want to create a succesful product for a specific event!</p>
     <h3>Valentine's Day</h3>
     <p>First, we'll take a look at Valentine's Day, the famous feast of love and romance.</p>
     <img class="center-block" src="plots/valentine-wordcloud.png"></img>
@@ -102,17 +102,19 @@ use-site-title: true
     <p>Last but not least, the red theme, maybe you thought it would the biggest one: the theme representing love and family. However, we are working with reviews so the people will usually talk more about the product and I hope your wife is not for sale on Amazon. This is probably why the theme is not predominant here. But it is interesting to see that we could still capture it, meaning that it strongly linked to Valentine.</p>
 
     <h3>Christmas</h3>
+		<p>Here, we choose the month of december with probably the biggest commercial feast.</p>
     <img class="center-block" src="plots/christmas-wordcloud.png"></img>
-
+		<p>There are four themes that stick out, the first and biggest one being gifts and presents. We can see that people tend to offer a lot and it is not surprising given that Christmas has a huge economical weight. Next, we can see more precise and specific Christmas words such as stocking stuffer or xmas. Then, we have a theme related to food that people tend to consume for Christmas. Indeed, there is, for instance, a few words assosciated with bakery such as glaze or fruit cake.However we should pay attention to those sensitive words who debatably belong to Christmas. "Beef" is indeed strongly present in Christmas recipies, but it could also be present for another reason. Finally, there a last theme linked with family that is surprinsigly not so present here. Since, we only keep the fifty top words, maybe the rest of them is drown below.</p>
     <h3>Easter</h3>
     <img class="center-block" src="plots/easter-wordcloud.png"></img>
 
     <h2>Impact of events on products</h2>
 
     <h2>Most popular event</h2>
+		<p>Now that we have seen what was hidden behind those events, let's compare them. To achieve this we have used the same approach than for the food trends. We first make a small pool of words using Word2Vec, an algorithm that allow us to find words similar to others, and check for the presence of words in this pool. That permit to well visualize the evolution of the event and their importance through the year.</p>
 
     <img class="center-block" id="popular-events" src="plots/popularness.png" onmouseover="onHover();" onmouseout="offHover();"></img>
-
+		<p>Such enthusiasm for Christmas. Indeed this event is very much popular in the United States. As we can see it occupies more than 2.5% at its peak of reviews published on the food section of Amazon and its effect last more than one month. The other two defend theirselves pretty well too. We can see how Valentine is a punctual event, quite popular but for a very short period. On the contrary Easter is much more sparse in time, given all family events that comes around it.</p>
 
     <h2>Anomalies</h2>
     <h3>Mad Max: Fury Road</h3>
