@@ -29,7 +29,7 @@ use-site-title: true
   <p>The data we use comes from Amazon reviews from the "Grocery and Gourmet Food" category between 2000 and 2018, it contains 5'074'160 reviews, which come from American users. We also have metadata about the products the reviews are about.</p>
   <p>However, we thus don't directly have access to what users bought. So we must be careful as we can't analyze what people purchased but only what they are reviewing. The information we have access to is indirect and it's more tricky to process it. We'll see that we can still get interesting insights from this. In fact, reviews contain much more information than just the sales as we can know what people are talking about during a specific event. The context can be infered and that's of great value.</p>
   <p>Example of a review:</p>
-  <img src="img/amazon-review-example.jpg" alt="Amazon example review"> 
+  <img src="img/amazon-review-example.jpg" alt="Amazon example review">
   <p>Here you can see the number of reviews we have for every day:</p>
 </div>
 
@@ -102,7 +102,8 @@ use-site-title: true
     <img class="center-block" id="popular-events" src="plots/popularness.png" onmouseover="onHover();" onmouseout="offHover();"></img>
 
 
-    <h2>Anomalies</h2>
+    <h2>Commercial events</h2>
+		<p>More can be found from comments of users on food products, even information about even that does not have anything to do with food. We show here two quick studies of anomalies that we found, which conducted us to some suprising findings.</p>
     <h3>Mad Max: Fury Road</h3>
     <p>The first anomaly we found was by simply plotting the time series of the number of reviews on multiple products and see if we could capture anything interesting, let's see what they look like:</p>
 </div>
@@ -139,5 +140,7 @@ use-site-title: true
     <li><em>&ldquo;IT BURNS OH IT BURNS WONDERFULLY THE PATH TO VALHALLA IS NOT A PAINLESS ONE&rdquo;</em></li>
   </ul>
   <p>Another funny thing to notice is that 98% of those reviews weren't verified purchases, meaning that the users most likely didn't buy it. Plus, most of these reviews have a lot of upvotes. The reviews of this product became sort of like a subreddit in a sense. This makes sense since it comes from a goup effect, initiated by a meme. It's interesting to see that we could find such an effect on Amazon food reviews and approximatively found the release date of a popular movie.</p>
-  <h3>Arty water or olive oil</h3>
+  <h3>Kasandrino's olive oil</h3>
+	<p>Here we were bugged by the word frequencies that we got for one year in november. Indeed when running our analysis described for the three events in this period, the five first words were: 'oil', 'love olive', 'olive oil' and 'kasandrinos'. This is very surprising, why would such entousiasm for olive oil suddenly pop up ? This happened because of one product getting abnormal interest.</p>
+	<h3>PLOT</h3>
 </div>
