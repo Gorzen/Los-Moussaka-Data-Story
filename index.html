@@ -10,7 +10,6 @@ use-site-title: true
         <div class="page-heading">
           <h1>Impact of events and a a  trends on users and products</h1>
           <hr class="small">
-          <span class="page-subheading">Data story for Amazon food</span>
         </div>
       </div>
     </div>
@@ -20,14 +19,10 @@ use-site-title: true
 <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
   <p class="box-error">Change title</p>
   <div class="alert alert-abstract" role="alert">
-    <h3 class="alert-heading">Abstract</h3>
-    <hr>
-    <p class="box-error">Sanitize Bob</p>
-    <p>Nowadays Amazon's popularity grows increasingly and becomes massive, it is ubiquitous in our era of cloud services and big data. Amazon has plenty of servers, buys big succesful companies such as Twitch, its CEO is the wealthiest man of our generation. But its underpinning is of course the website Amazon, thus making it a very interesting data provider.</p>
-    <p>On Amazon you can buy almost any product nowadays, including food. Indeed you can buy your groceries on Amazon and you can see users's ratings of the food item you're looking at. This of course changes the consumer's behavior. However, how much of an impact does it have on the consumer? In particular we know that people tend to be deeply affected by group effects, such as festive events. Indeed, Christmas or Valentine's day have a big impact on sales, is it possible to quantify it using reviews? There also are food trends such as veganism or specific diets, can we also observe an increase here?</p>
+    <em>Nowadays Amazon's popularity grows increasingly and becomes massive, it is ubiquitous in our era of cloud services and big data. Amazon has plenty of servers, buys big succesful companies such as Twitch, its CEO is the wealthiest man of our generation. But its underpinning is of course the website Amazon, thus making it a very interesting data provider.</em>
+    <p><em>On Amazon you can buy almost any product nowadays, including food. Indeed you can buy your groceries on Amazon and you can see users's ratings of the food item you're looking at. This of course changes the consumer's behavior. However, how much of an impact does it have on the consumer? In particular we know that people tend to be deeply affected by group effects, such as festive events. Indeed, Christmas or Valentine's day have a big impact on sales, is it possible to quantify it using reviews? There also are food trends such as veganism or specific diets, can we also observe an increase here?</em></p>
   </div >
 
-  <h2>Research questions</h2>
   <p>We want to study the impact of events and trends. Events such as Christmas, Easter or Valentine's Day and trends such as veganism or diets. This will give us good information about the change in both user behaviour and product behaviour depending on the events. There are many interesting questions one could think of, to analyze this subject we selected 4 questions we want to focus on and we'll answer them here for you!</p>
   <ul>
     <li>What food trends can we observe? Can we detect evolutions?</li>
@@ -36,8 +31,6 @@ use-site-title: true
     <li>Any weird phenomenas we can catch? Mainstream event outside of food topic? Fake commercial reviews?</li>
   </ul>
 
-  <h2>The dataset</h2>
-  <p class="box-error">Sanitize Bob</p>
   <p>The data we use comes from Amazon reviews from the "Grocery and Gourmet Food" category between 2000 and 2018, it contains 5'074'160 reviews, which come from American users. We also have metadata about the products the reviews are about.</p>
   <p>However, we thus don't directly have access to what users bought. So we must be careful as we can't analyze what people purchased but only what they are reviewing. The information we have access to is indirect and it's more tricky to process it. We'll see that we can still get interesting insights from this. In fact, reviews contain much more information than just the sales as we can know what people are talking about during a specific event. The context can be infered and that's of great value.</p>
   <p>Example of a review:</p>
@@ -109,6 +102,9 @@ use-site-title: true
     <img class="center-block" src="plots/easter-wordcloud.png"></img>
 
     <h2>Impact of events on products</h2>
+    <img class="center-block" src="plots/ci-valentine.png"></img>
+    <img class="center-block" src="plots/ci-christmas.png"></img>
+    <p>FLO: Tu peux aussi Bober là en commençant par Valentine et c'est le pain béni parce que c'est des produits hyper spécifiques: des fleurs. Alors que Christmas c'est juste des nuts, du coup c'est moins 0 toute l'année puis BAM à Noël. Donc là on voit les pros et cons. Christmas easy pour trouver des mots mais c'est moins précis, Valentine un peu plus tricky mais ils sont hyper liés à Valentine.</p>
 
     <h2>Most popular event</h2>
 		<p>Now that we have seen what was hidden behind those events, let's compare them. To achieve this we have used the same approach than for the food trends. We first make a small pool of words using Word2Vec, an algorithm that allow us to find words similar to others, and check for the presence of words in this pool. That permit to well visualize the evolution of the event and their importance through the year.</p>
