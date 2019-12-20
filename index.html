@@ -47,6 +47,46 @@ use-site-title: true
 </div>
 
 <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+  <h1>Food trends</h1>
+  <h3>Consumption evolution</h3>
+  <img class="center-block" src="plots/vegan-trend.png">
+  <p>Bob vegan</p>
+  <img class="center-block" src="plots/diets-trend.png">
+  <p>Bob diet</p>
+
+  <h3>Countries assosciation to food</h3>
+  <button onclick="plot_country('coffee')">Coffee</button>
+  <button onclick="plot_country('tea')">Tea</button>
+  <button onclick="plot_country('cheese')">Cheese</button>
+  <button onclick="plot_country('curry')">Curry</button>
+  <button onclick="plot_country('espresso')">Espresso</button>
+  <button onclick="plot_country('wine')">Wine</button>
+  <img id="country-plot" class="center-block" src="plots/coffee.png"></img>
+  <script>
+    function plot_country(name) {
+      document.getElementById("country-plot").src = "plots/" + name + ".png";
+    }
+  </script>
+  <p>Bob Country</p>
+
+
+  <h1>Impact of events on users</h1>
+  <h3>Valentine's Day</h3>
+  <img class="center-block" src="plots/valentine-wordcloud.png"></img>
+
+  <h3>Christmas</h3>
+  <img class="center-block" src="plots/christmas-wordcloud.png"></img>
+
+  <h3>Easter</h3>
+  <img class="center-block" src="plots/easter-wordcloud.png"></img>
+
+  <h1>Impact of events on products</h1>
+  
+  <h1>Most popular event</h1>
+
+
+  <h1>Anomalies</h1>
+  <h3>Mad Max: Fury Road</h3>
   <p class="box-note">
   <em><strong>Nux: </strong>&ldquo;Witness me!&rdquo;</em>
   <br/>
